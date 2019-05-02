@@ -5,7 +5,7 @@
 
         <!-- adding custom-link -->
         <referenceBlock name="header.links">
-            <block class="Magento\Framework\View\Element\Html\Link" name="custom-link" after="">
+            <block class="Magento\Framework\View\Element\Html\Link" name="custom-link" >
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Sample Link</argument>
                     <argument name="path" xsi:type="string" translate="true">sample.phtml</argument>
