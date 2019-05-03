@@ -1,20 +1,25 @@
-<script type="text/javascript">
+
+<script>
     require([
         'jquery',
-        'owlCarousel'
-    ], function($,owlCarousel){
-        $('.owl-carousel').owlCarousel({
-            item : 1,
-            lazyLoad :true,
-            loop :true,
-            margin :10
+        'owlcarousel'
+    ], function () {
+        'use strict';
+        jQuery.noConflict();
+        jQuery(".owl-carousel").owlCarousel({
+            //nav: true, // Show next and prev buttons
+            //navText:["previous","next"], //show prev next
+            loop: true,
+            autoplay: true, //Set AutoPlay
+            autoplayHoverPause: true, //stop when mouse on carousel
+            items : 1
         });
     });
 </script>
 
 
 <div class="owl-carousel owl-theme">
-    <div><img src="https://placehold.it/350x250&text=1"></div>
-    <div><img src="https://placehold.it/350x250&text=2"></div>
-    <div><img src="https://placehold.it/350x250&text=3"></div>
+    <div><img src="https://placehold.it/350x250&text=1" style="height:300px;" /></div>
+    <div><img src="https://placehold.it/350x250&text=2" style="height:300px;" /></div>
+    <div><img src="https://placehold.it/350x250&text=3" style="height:300px;" /></div>
 </div>
