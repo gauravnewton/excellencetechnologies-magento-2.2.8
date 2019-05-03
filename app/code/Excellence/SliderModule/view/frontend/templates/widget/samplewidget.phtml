@@ -1,60 +1,20 @@
-<!-- <?php
- if($block->getData('widgettitle')): ?>
-            <h2 class='cloudways-title'><?php echo $block->getData('widgettitle'); ?> </h2>
-<?php endif; ?>
-<?php if($block->getData('widgetcontent')): ?>
-            <h2 class='cloudways-content'><?php echo $block->getData('widgetcontent'); ?></h2>
-<?php endif; ?>
- -->
-<!DOCTYPE html>
-<html> <!-- lang="en" -->
-<!-- <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head> -->
-<body>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'owlCarousel'
+    ], function($,owlCarousel){
+        $('.owl-carousel').owlCarousel({
+            item : 1,
+            lazyLoad :true,
+            loop :true,
+            margin :10
+        });
+    });
+</script>
 
-<div class="container"> 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="<?php echo $block->getUrl("pub/media/images/")?>slide1.png" alt="slide1" style="width:100%; height:480px;">
-      </div>
-
-      <div class="item">
-       <img src="<?php echo $block->getUrl("pub/media/images/")?>slide2.png" alt="slide2" style="width:100%; height:480px;">
-      </div>
-    
-      <div class="item">
-       <img src="<?php echo $block->getUrl("pub/media/images/")?>slide3.png" alt="slide3" style="width:100%; height:480px;">
-
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+<div class="owl-carousel owl-theme">
+    <div><img src="https://placehold.it/350x250&text=1"></div>
+    <div><img src="https://placehold.it/350x250&text=2"></div>
+    <div><img src="https://placehold.it/350x250&text=3"></div>
 </div>
-
-</body>
-</html>
-
