@@ -144,6 +144,7 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
         'Temando_Shipping' => 1,
+        'Trieffects_SliderModule' => 1,
         'Vertex_Tax' => 1
     ]
 ];
