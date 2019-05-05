@@ -20,6 +20,7 @@
 
 try {
     require __DIR__ . '/app/bootstrap.php';
+    define('MAGENTO_ROOT', getcwd());
 } catch (\Exception $e) {
     echo <<<HTML
 <div style="font:12px/1.35em arial, helvetica, sans-serif;">
