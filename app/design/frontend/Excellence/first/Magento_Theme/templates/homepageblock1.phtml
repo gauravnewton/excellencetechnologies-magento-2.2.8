@@ -37,36 +37,38 @@
 
 
     <div class="column-2 back-img">
-        <img  src="<?php echo $block->getUrl("pub/media/images")?>black-women.png"  alt="100%-canadian-design"/><br/>
+        <img style="height:450px; width:100%;" src="<?php echo $block->getUrl("pub/media/images")?>black-women.png"  alt="100%-canadian-design"/><br/>
 
     </div>
 
-    <div class="column-2 back-img">
-        <div class="owl-carousel owl-theme">
+    <div class="column-2" style="height:450px;">
+        <!--<div class="owl-carousel owl-theme" >
             <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide1" /></div>
             <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide2" /></div>
             <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide3" /></div>
-        </div>
+        </div>--><?php echo "Product Slider 1"; ?>
     </div>
+
+
+
+
+
 
 </div>
 
 
+<div class="row">
+   <div class="column-2 ">
+   <!--<div class="owl-carousel owl-theme">
+            <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide1" /></div>
+            <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide2" /></div>
+            <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide3" /></div>
+        </div>--><?php echo "Product Slider 2"; ?>
+    </div>
 
-<script>
-    require([
-        'jquery',
-        'owlcarousel'
-    ], function () {
-        'use strict';
-        jQuery.noConflict();
-        jQuery(".owl-carousel").owlCarousel({
-            //nav: true, // Show next and prev buttons
-            //navText:["previous","next"], //show prev next
-            loop: true,
-            autoplay: true, //Set AutoPlay
-            autoplayHoverPause: true, //stop when mouse on carousel
-            items : 3
-        });
-    });
-</script>
+    <div class="column-2 back-img">
+        <img style="height:450px; width:100%;" src="<?php echo $block->getUrl("pub/media/images")?>men-black-white.png"  alt="100%-canadian-design"/><br/>
+    </div>
+
+</div>
+

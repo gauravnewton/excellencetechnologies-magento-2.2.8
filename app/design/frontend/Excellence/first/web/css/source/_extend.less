@@ -92,9 +92,14 @@
 
 
 
-.page-header .panel.wrapper {
-  border-bottom: 1px solid #e8e8e8;
-  background-color: #DDE3E9;
+.page-header{
+  & .panel.wrapper {
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #DDE3E9;
+  }
+  & .links, .panel.header .switcher{
+    float:left;
+  }
 }
 
 .logo img {
@@ -104,8 +109,13 @@
 
 .navigation{
   background-color: #DDE3E9;
+  & ul{
+  text-align:center;
+}
 }
 
 .nav-sections{
   background-color: #DDE3E9;
 }
+
+
