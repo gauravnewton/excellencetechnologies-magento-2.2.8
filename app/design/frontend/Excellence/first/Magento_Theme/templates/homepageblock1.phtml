@@ -1,0 +1,72 @@
+
+
+<div class="row">
+    <div class="column-3">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>leaf.png"  alt="100%-canadian-design"/><br/>
+        <img src="<?php echo $block->getUrl("pub/media/images")?>100.png"  alt="100%-canadian-design"/>
+    </div>
+    <div class="column-3">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>shield.png"  alt="shield"/><br/>
+        <img src="<?php echo $block->getUrl("pub/media/images")?>established.png"  alt="established"/>
+    </div>
+    <div class="column-3">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>snap.png"  alt="snap"/><br/>
+        <img src="<?php echo $block->getUrl("pub/media/images")?>genuine.png"  alt="genuine"/>
+    </div>
+</div>
+
+
+<div class="row">
+
+
+
+    <div class="column-2 back-img">
+        <img style="height:300px; width:100%;" src="<?php echo $block->getUrl("pub/media/images")?>shot1.png"  alt="100%-canadian-design"/><br/>
+        <div class="centered">
+            <img src="<?php echo $block->getUrl("pub/media/images")?>up-to-30.png"  alt="up-to-30"/><br/>
+        </div>
+    </div>
+
+    <div class="column-2 back-img">
+        <img style="height:300px; width:100%;" src="<?php echo $block->getUrl("pub/media/images")?>handbags.png"  alt="hand-bags"/><br/>
+        <div class="centered">
+            <img src="<?php echo $block->getUrl("pub/media/images")?>because.png"  alt="up-to-30"/><br/>
+            <img src="<?php echo $block->getUrl("pub/media/images")?>celebrate.png"  alt="up-to-30"/><br/>
+        </div>
+    </div>
+
+
+    <div class="column-2 back-img">
+        <img  src="<?php echo $block->getUrl("pub/media/images")?>black-women.png"  alt="100%-canadian-design"/><br/>
+
+    </div>
+
+    <div class="column-2 back-img">
+        <div class="owl-carousel owl-theme">
+            <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide1" /></div>
+            <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide2" /></div>
+            <div class="slide canvas"><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide3" /></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+    require([
+        'jquery',
+        'owlcarousel'
+    ], function () {
+        'use strict';
+        jQuery.noConflict();
+        jQuery(".owl-carousel").owlCarousel({
+            //nav: true, // Show next and prev buttons
+            //navText:["previous","next"], //show prev next
+            loop: true,
+            autoplay: true, //Set AutoPlay
+            autoplayHoverPause: true, //stop when mouse on carousel
+            items : 3
+        });
+    });
+</script>

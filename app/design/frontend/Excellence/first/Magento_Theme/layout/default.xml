@@ -1,41 +1,90 @@
 <?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="main-header-container" label="" htmlTag="div" htmlClass="main-header-container" />
+        </referenceContainer>
+        <!-- <move element="" destination="container" before="-"/> -->
+        <move element="logo" destination="main-header-container"/>
+        <move element="navigation.sections" destination="main-header-container" />
+        <move element="top.search" destination="main-header-container" before="-" />
+        <!-- before="navigation.sections"/> -->
+        <move element="minicart" destination="header.panel" before="-"/>
+        <move element="view-default" destination="header.panel"/>
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true"/>
+
+        <referenceContainer name="header-wrapper" remove="true" />
+
+    </body>
+</page>
+
+
+
+<!--<?xml version="1.0"?> -->
 <!-- /** * Copyright © Magento, Inc. All rights reserved. * See COPYING.txt for license details. */ -->
+<!--
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
-        <!-- adding custom-link -->
-        <referenceBlock name="header.links">
-            <block class="Magento\Framework\View\Element\Html\Link" name="custom-link" >
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">Sample Link</argument>
-                    <argument name="path" xsi:type="string" translate="true">sample.phtml</argument>
-                    <argument name="class" xsi:type="string" translate="true">customlink</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
-        <!-- removing custom-link
-        <referenceBlock name="custom-link" remove="true"/>
-        -->
-        <referenceContainer name="home_slider">
-             <block class="Magento\Framework\View\Element\Template" name="startphoto" template="Magento_Theme::html/slider.phtml" after="-">
-         </block>
-       </referenceContainer>
-
-        <referenceBlock name="footer_links">
-           <block class="Magento\Framework\View\Element\Html\Link" name="custom-link-for-footer">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">Custom Link</argument>
-                    <argument name="path" xsi:type="string" translate="true">customlink</argument>
-                    <argument name="class" xsi:type="string" translate="true">customlink</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
+        <move element="top.search" destination="catalog.topnav" after="-" />
+        <move element="logo" destination="catalog.topnav" before="-" />
+        <move element="minicart" destination="header.panel" before="-"  />
+        <referenceBlock name="register-link" remove="true" />
     </body>
 </page>
+-->
 
 
 <!--
  <referenceContainer name="after.body.start">
             <block class="Magento\Framework\View\Element\Template" name="samplefile" before="-" template="Magento_Theme::sample.phtml" />
     </referenceContainer>
+-->
+<!-- adding custom-link -->
+<!--
+
+        <move element="top.search" destination="page.top" />
+
+
+<referenceBlock name="header.container" remove="true" />
+<referenceBlock name="navigation.sections" remove="true" />
+<referenceBlock name="main.content" remove="true" />
+<referenceBlock name="footer-container" remove="true" />
+
+
+
+<referenceContainer name="header.additional" >
+<block class="Magento\Framework\View\Element\Template" name="startphoto" template="Magento_Theme::/header.phtml" before="-"></block>
+</referenceContainer>
+
+
+
+
+<referenceBlock name="header.links">
+    <block class="Magento\Framework\View\Element\Html\Link" name="custom-link" >
+        <arguments>
+            <argument name="label" xsi:type="string" translate="true">Sample Link</argument>
+            <argument name="path" xsi:type="string" translate="true">sample.phtml</argument>
+            <argument name="class" xsi:type="string" translate="true">customlink</argument>
+        </arguments>
+    </block>
+</referenceBlock>
+
+-->
+
+<!--
+<referenceBlock name="footer_links">
+    <block class="Magento\Framework\View\Element\Html\Link" name="custom-link-for-footer">
+        <arguments>
+            <argument name="label" xsi:type="string" translate="true">Custom Link</argument>
+            <argument name="path" xsi:type="string" translate="true">customlink</argument>
+            <argument name="class" xsi:type="string" translate="true">customlink</argument>
+        </arguments>
+    </block>
+</referenceBlock>
+
+removing custom-link
+<referenceBlock name="custom-link" remove="true"/>
+
 -->
