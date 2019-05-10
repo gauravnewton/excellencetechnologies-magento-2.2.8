@@ -41,9 +41,9 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
                 </div>
             </div>
             <div class="actions">
-                <button type="submit"
+                <button type="submit" style="bottom:18px;"
                         title="<?= $block->escapeHtml(__('Search')) ?>"
-                        class="action search">
+                        class="action search" >
                     <span><?= /* @escapeNotVerified */ __('Search') ?></span>
                 </button>
             </div>
@@ -58,29 +58,30 @@ require(['jquery'], function($) {
         //console.log('test2');
         $(".main2-header-container").toggle();
         $("#search-btn").toggleClass("decorate-btn");
-        
+        //$("#search-btn").toggleClass("border-bottom");
+        //$(".fa").toggleClass("search-underline");
         });
 
    
 
-    $('.nav-1').hover(function(){
-      $(".nav-1").toggleClass("decorate-btn");  //Toggle the active class to the area is hovered
+  /*  $('.nav-1').hover(function(){
+      $(".nav-1").toggleClass("decorate-li");  //Toggle the active class to the area is hovered
     });
 
     $('.nav-2').hover(function(){
-        $(".nav-2").toggleClass("decorate-btn");  //Toggle the active class to the area is hovered
+        $(".nav-2").toggleClass("decorate-li");  //Toggle the active class to the area is hovered
     });
 
     $('.nav-3').hover(function(){
-        $(".nav-3").toggleClass("decorate-btn");  //Toggle the active class to the area is hovered
+        $(".nav-3").toggleClass("decorate-li");  //Toggle the active class to the area is hovered
     });
 
     $('.nav-4').hover(function(){
-        $(".nav-4").toggleClass("decorate-btn");  //Toggle the active class to the area is hovered
+        $(".nav-4").toggleClass("decorate-li");  //Toggle the active class to the area is hovered
     });
 
     $('.nav-5').hover(function(){
-        $(".nav-5").toggleClass("decorate-btn");  //Toggle the active class to the area is hovered
-    });
+        $(".nav-5").toggleClass("decorate-li");  //Toggle the active class to the area is hovered
+    }); */
 });
 </script>
