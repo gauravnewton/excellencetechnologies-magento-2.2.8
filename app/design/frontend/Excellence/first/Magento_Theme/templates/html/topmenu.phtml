@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+
+<nav class="navigation" data-action="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":false, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?= /* @escapeNotVerified */ $_menu ?>
+        <?= /* @escapeNotVerified */ $block->getChildHtml() ?>
+	<li class="level0  category-item  level-top ui-menu-item" id="search-btn">
+        <a href="#" class="level-top ui-corner-all"><span class="fa fa-search"></span>
+        <!-- -->
+	</li>
+    </ul>
+</nav>
+
+
+<script type="text/javascript">
+require(['jquery'], function($) {
+    //console.log('test1');
+    $('#search-btn').click(function(){
+        //console.log('test2');
+        $(".main2-header-container").toggle();
+        $("#search-btn").toggleClass("decorate-btn");
+        
+        });
+});
+</script>

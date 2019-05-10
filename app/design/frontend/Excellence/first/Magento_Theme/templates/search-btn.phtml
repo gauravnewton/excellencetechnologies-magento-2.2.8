@@ -1,0 +1,17 @@
+<button type="button" name="" id="search-btn" style="background: url(<?php echo $block->getUrl("pub/media/images")?>search.png) no-repeat;
+    " class="search-btn" ></button>
+
+
+
+
+    <script type="text/javascript">
+    require(['jquery'], function($) {
+        //console.log('test1');
+        $('#search-btn').click(function(){
+            //console.log('test2');
+            $(".main2-header-container").toggle();
+            $("#search-btn").toggleClass("decorate-btn");
+            
+            });
+    });
+    </script>

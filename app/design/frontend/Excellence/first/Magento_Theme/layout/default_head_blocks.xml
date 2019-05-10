@@ -7,5 +7,7 @@
         <css src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"  src_type="url" rel="stylesheet" type="text/css"  />
         -->
         <!--<script src="js/script.js" type="text/javascript" />-->
+        <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" src_type="url" /> 
+        <link rel="stylesheet" type="text/css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src_type="url" />
     </head>
 </page>

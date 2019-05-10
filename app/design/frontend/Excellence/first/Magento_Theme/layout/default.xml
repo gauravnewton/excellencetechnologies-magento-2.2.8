@@ -3,18 +3,24 @@
     <body>
         <referenceContainer name="header.container">
             <container name="main-header-container" label="" htmlTag="div" htmlClass="main-header-container" />
+            <!--adding search button through phtml-->
+            <!--<block class="Magento\Framework\View\Element\Template" name="search-btn-close" template="Magento_Theme::/search-close.phtml"></block>-->
         </referenceContainer>
         <!-- <move element="" destination="container" before="-"/> -->
-        <move element="logo" destination="main-header-container"/>
+        <move element="logo" destination="main-header-container" before="navigation.section"/>
         <move element="navigation.sections" destination="main-header-container" />
-        <move element="top.search" destination="main-header-container" before="-" />
+        <move element="top.search" destination="main2-header-container" />
         <!-- before="navigation.sections"/> -->
         <move element="minicart" destination="header.panel" before="-"/>
         <move element="view-default" destination="header.panel"/>
         <referenceBlock name="register-link" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true"/>
-
+        <!--<move element="search-btn-close" destination="main2-header-container" after="top.search"/>-->
         <referenceContainer name="header-wrapper" remove="true" />
+
+        <referenceContainer name="header.container" >
+            <container name="main2-header-container" label="" htmlTag="div" htmlClass="main2-header-container" />
+        </referenceContainer>
 
     </body>
 </page>
