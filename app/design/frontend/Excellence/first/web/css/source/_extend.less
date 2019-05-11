@@ -112,10 +112,9 @@
   & .switcher strong{
     font-size:12px;
     text-transform: uppercase;
-     
   }
   & .panel.wrapper {
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 0px solid #e8e8e8;
     background-color: #DDE3E9;
   }
   & .links, .panel.header .switcher{
@@ -210,6 +209,7 @@
 .navigation .level0 > .level-top{
   font-family: 'Oswald', sans-serif;
   font-weight: 900;
+  color:black !important;
 }
 .nav-sections{
   margin-bottom:0px;
@@ -249,6 +249,7 @@
 .main2-header-container{
   background-color:white;
   display:none;
+  position: relative;
   line-height: 4;
 }
 
@@ -268,21 +269,37 @@
 
 .btn-close{
   position: absolute;
-  margin-left: 101%;
+  margin-left: 70%;
   cursor: pointer;
-  margin-top: -75px;
+  margin-top: -93px;
   font-weight: bold;
 }
-
+ #search_mini_form{
+  width: 44%;
+  margin-left: 25%;
+ }
 
 .block-search
  {
+    float: none;
+    width: 44%;
+    left: 26%;
+    padding-left: 0px;
 
-  float:none;
-  width:60%;
-  left:17%;
-  padding-left: 0px;
+    position: absolute;
+    background: white;
+    width: 100%;
+    left: 0px;
+    
   .action.search{
+    margin-right: 31% !important;
+    &:before{
+      font-family:@demanded-font !important;
+      color:black !important;
+      padding: 0 15px 0 15px !important;
+      margin-left: 0% !important;
+      right: 31.8% !important;
+    }
     &{
       margin:8px 0px 0px 0px;
     }
@@ -315,7 +332,8 @@
     
   }
   & input{
-    margin:8px 0px 0px 0px;
+    margin:25px 0px 14px 0px; 
+    height:41px;
   }
 }
 
@@ -337,6 +355,12 @@
 // }
 .navigation .level0:hover a.level-top.ui-corner-all span{
   border-bottom: 2px solid #000 !important;
+  color:black;
+}
+
+.navigation .level0:active a.level-top.ui-corner-all span{
+  border-bottom: 2px solid #000 !important;
+  color:black;
 }
 
 .navigation .level0:hover{
@@ -345,8 +369,50 @@
 
 .search{
   padding-bottom:6px;
+  margin-left: 2%;
+  right: 31.5%;
 }
 
 .action.search{
-  bottom:18px;
+  bottom: 20px !important;
+  top: 25px !important;
+}
+
+.navigation .level0.active > .level-top
+{
+  border-style: none !important;
+}
+
+.navigation .level0.has-active > .level-top
+{
+  border-style:none !important;
+}
+
+
+::placeholder { 
+    font-family:@demanded-font;  
+  }
+.search-icon{
+  margin:0 5px 0 5px;
+}
+  
+.show-hide{
+  visibility: none;
+}
+.img-top{
+  margin-top:-18%;
+}
+.full-width{
+width:100%;
+}
+//media query starts..
+
+
+//for small device below resolution 768
+@media (max-width: 768px) {
+  .column-2.back-img {
+    width: 100%; //full width image
+    float: none;
+  }
+  
 }
