@@ -2,10 +2,10 @@
     require([
         'jquery',
         'owlcarousel'
-    ], function () {
+    ], function ($) {
         'use strict';
-        jQuery.noConflict();
-        jQuery(".owl-carousel").owlCarousel({
+        $.noConflict();
+        $(".main-slider").owlCarousel({
             //nav: true, // Show next and prev buttons
             //navText:["previous","next"], //show prev next
             loop: true,
@@ -16,7 +16,7 @@
     });
 </script>
 
-<div class="owl-carousel owl-theme">
+<div class="owl-carousel main-slider owl-theme">
     <div><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide1" /></div>
     <div><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide2" /></div>
     <div><img src="<?php echo $block->getUrl("pub/media/images")?>slide1.png" alit="slide3" /></div>

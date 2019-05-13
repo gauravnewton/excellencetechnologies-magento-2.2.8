@@ -1,5 +1,3 @@
-
-
 <div class="row">
     <div class="column-3">
         <img src="<?php echo $block->getUrl("pub/media/images")?>leaf.png"  alt="100%-canadian-design"/><br/>
@@ -15,15 +13,15 @@
     </div>
 </div>
 
+
+
 <div>
-
-
-<div class="column-2 back-img">
-        <img class="full-width" src="<?php echo $block->getUrl("pub/media/images")?>shot1.png"  alt="100%-canadian-design"/><br/>
-        <div class="centered">
-            <img src="<?php echo $block->getUrl("pub/media/images")?>up-to-30.png"  alt="up-to-30"/><br/>
-        </div>
-</div>
+    <div class="column-2 back-img">
+            <img class="full-width" src="<?php echo $block->getUrl("pub/media/images")?>shot1.png"  alt="100%-canadian-design"/><br/>
+            <div class="centered">
+                <img src="<?php echo $block->getUrl("pub/media/images")?>up-to-30.png"  alt="up-to-30"/><br/>
+            </div>
+    </div>
 
     <div class="column-2 back-img">
         <img class="full-width" src="<?php echo $block->getUrl("pub/media/images")?>handbags.png"  alt="hand-bags"/><br/>
@@ -42,48 +40,163 @@
         <img src="<?php echo $block->getUrl("pub/media/images")?>black-women.png"  alt="up-to-30"/>
     </div>
 
-    <div class="column-2">
-        <div class="owl-carousel-women-catalog owl-theme">
-            <div class="item"><h4>1</h4></div>
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
-            <div class="item"><h4>8</h4></div>
-            <div class="item"><h4>9</h4></div>
-            <div class="item"><h4>10</h4></div>
-            <div class="item"><h4>11</h4></div>
-            <div class="item"><h4>12</h4></div>
+    <div class="column-2 women-catalog-slider">
+        <div class="catalog-text">
+            <img src="<?php echo $block->getUrl("pub/media/images")?>femmes.png" alit="slide1"  /><br/>
+            <img style="padding-top: 4%;" src="<?php echo $block->getUrl("pub/media/images")?>lora-ipsum.png" alit="slide1"  />
+        </div>
+
+        <div class="owl-carousel catalog-carousel owl-theme">
+            <div class="item text-center"><img src="<?php echo $block->getUrl("pub/media/images")?>s-1.png" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $block->getUrl("pub/media/images")?>s-2.png" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
+            
         </div>
     </div>
 </div>
+
+
+
+
+
+
+<div style="width:100%; float:left;" >
+    
+
+    <div class="column-2 men-catalog-slider">
+        <div class="catalog-text">
+            <img src="<?php echo $block->getUrl("pub/media/images")?>hommes.png" alit="slide1"  /><br/>
+            <img style="padding-top: 4%;" src="<?php echo $block->getUrl("pub/media/images")?>lora-ipsum.png" alit="slide1"  />
+        </div>
+
+        <div class="owl-carousel catalog-carousel owl-theme">
+            <div class="item text-center"><img src="<?php echo $block->getUrl("pub/media/images")?>men-1.png" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $block->getUrl("pub/media/images")?>men-2.png" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="column-2">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>men-black-white.png"  alt="up-to-30"/>
+    </div>
+</div>
+
+
+
+<!-- less essential slider -->
+<div class="less-essential">
+    <div class="less-text">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>less-essential.png" alit="slide1" />
+    </div>
+
+    <div style="width:100%;">
+        <div class="owl-carousel less-essential-slider owl-theme">
+            <div class="item text-center"><img src="<?php echo $block->getUrl("pub/media/images")?>men-1.png" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $block->getUrl("pub/media/images")?>men-2.png" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
+            <div class="item text-center"><img src="<?php echo $block->getUrl("pub/media/images")?>men-1.png" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $block->getUrl("pub/media/images")?>men-2.png" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
+            <div class="item text-center"><img src="<?php echo $block->getUrl("pub/media/images")?>men-2.png" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 <script>
     require([
         'jquery',
         'owlcarousel'
     ], function ($) {
         // 'use strict';
-        // jQuery.noConflict();
-        $(".owl-carousel-women-catalog").owlCarousel({
+        // $.noConflict();
+
+        //less-essential-slider
+        $(".less-essential-slider").owlCarousel({
             loop:true,
             margin:10,
             nav:true,
+            items: 5,
             responsive:{
                 0:{
                     items:1
                 },
                 600:{
-                    items:3
+                    items:2
                 },
                 1000:{
                     items:5
                 }
             }
         });
+
+
+        //men-catalog-carousel
+        $(".men-catalog-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            dots: true,
+            items: 2,
+            dots:true,
+            dotsData:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:2
+                }
+            }
+        });
+
+        //women-catalog-slider
+
+        $(".catalog-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            items: 2,
+            dots:true,
+            dotsData:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:2
+                }
+            }
+        });
+
+
+        
     });
-
-
-
 </script>

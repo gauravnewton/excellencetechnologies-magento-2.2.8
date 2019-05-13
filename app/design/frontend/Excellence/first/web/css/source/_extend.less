@@ -49,6 +49,9 @@
 .text-center{
   text-align:center;
 }
+.demand-font{
+  font-family: @demanded-font;
+}
 
 .canvas {
   &{
@@ -218,6 +221,7 @@
 .main-header-container{
   width:65%;
   margin:0 auto;
+  margin-bottom:10px;
 }
 .page-header{
   background: #DDE3E9;
@@ -405,6 +409,63 @@
 .full-width{
 width:100%;
 }
+
+
+.women-catalog-slider{
+  text-align: left;
+  padding: 0% 7% 0% 7%;
+}
+
+.men-catalog-slider{
+  text-align: right;
+  padding: 0% 7% 0% 7%;
+}
+
+.less-essential{
+  width:100%;
+  float:right; 
+  padding:2%;
+}
+.less-text{
+  padding-bottom:2%;
+}
+
+.catalog-text{
+  &{
+    margin-bottom:6%;
+    text-align:left;
+  }
+  & .img-2{
+    padding-top:3%;
+  }
+}
+
+
+
+//footer less starts here.
+.block.newsletter{
+  background: black;
+  width: 100%;
+  padding: 4% 30% 4% 30%;
+}
+
+.newsletter-text{
+    float: left;
+    font-weight: 400;
+    font-size: 21px;
+    color: #fff;
+    font-family: @demanded-font;
+    padding-top:1.2%;
+}
+
+.block.newsletter input {
+  padding-left: 0px;
+}
+
+.footer-padding{
+  padding:10px;
+}
+
 //media query starts..
 
 
@@ -413,6 +474,11 @@ width:100%;
   .column-2.back-img {
     width: 100%; //full width image
     float: none;
+  }
+
+  .column-2{
+    width:100%;
+    float:none;
   }
   
 }

@@ -22,6 +22,12 @@
             <container name="main2-header-container" label="" htmlTag="div" htmlClass="main2-header-container" />
         </referenceContainer>
 
+        <move element="form.subscribe"  before="-" destination="footer-container" />
+        <referenceBlock name="footer_links" remove="true"/>
+	
+        <!-- footer custom link with block phtml file -->
+        <block class="Magento\Framework\View\Element\Template" name="footer-custum-link" template="Magento_Theme::custom-footer.phtml" />
+        <move element="footer-custum-link" destination="footer-container" />
     </body>
 </page>
 
@@ -91,6 +97,6 @@
 </referenceBlock>
 
 removing custom-link
-<referenceBlock name="custom-link" remove="true"/>
+<referenceBlock name="footer_links" remove="true"/>
 
 -->
