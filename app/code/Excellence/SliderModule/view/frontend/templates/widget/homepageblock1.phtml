@@ -1,17 +1,8 @@
 <?php
-    // //$test = $block->grabbingProductList();
-    // $helper = $this->helper('Excellence\SliderModule\Helper\Data');
-    // $productCollection = $helper->getProductCollection();
-    // // echo get_class($block);
-    // //echo "<pre>";
-    // // die('testt');
-    // foreach ($productCollection as $product){
-    //     echo $product->getName().'<br>';
-    //     echo $product->getSKU().'<br/>';
-    //     echo $product->getImage().'<br/>';
-        
-    // }
-    // die;
+// $test = $block->grabbingProductList();
+// //echo get_class($block);
+// echo "<pre>";
+// // print_r($test);
 ?>
 
 
@@ -64,12 +55,15 @@
             <img style="padding-top: 4%;" src="<?php echo $this->getViewFileUrl("images/lora-ipsum.png"); ?>" alit="slide1"  />
         </div>
 
-        <?php
+        <div class="owl-carousel catalog-carousel owl-theme">
+            <div class="item text-center"><img src="<?php echo $this->getViewFileUrl("images/s-1.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $this->getViewFileUrl("images/s-2.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
             
-            echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('women-catalog-slider')
-            ->toHtml();
-        ?>
+        </div>
     </div>
 </div>
 
@@ -87,12 +81,15 @@
             <img style="padding-top: 4%;" src="<?php echo $this->getViewFileUrl("images/lora-ipsum.png"); ?>" alit="slide1"  />
         </div>
 
-        <?php
+        <div class="owl-carousel catalog-carousel owl-theme">
+            <div class="item text-center"><img src="<?php echo $this->getViewFileUrl("images/men-1.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $this->getViewFileUrl("images/men-2.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
             
-            echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')
-            ->setBlockId('men-catalog-slider')
-            ->toHtml();
-        ?>
+        </div>
     </div>
 
     <div class="column-2">
@@ -100,6 +97,35 @@
     </div>
 </div>
 
+
+
+<!-- less essential slider -->
+<div class="less-essential">
+    <div class="less-text">
+        <img src="<?php echo $this->getViewFileUrl("images/less-essential.png"); ?>" alit="slide1" />
+    </div>
+
+    <div style="width:100%;">
+        <div class="owl-carousel less-essential-slider owl-theme">
+            <div class="item text-center"><img src="<?php echo $this->getViewFileUrl("images/men-1.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $this->getViewFileUrl("images/men-2.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
+            <div class="item text-center"><img src="<?php echo $this->getViewFileUrl("images/men-1.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            <div class="item text-center" ><img src="<?php echo $this->getViewFileUrl("images/men-2.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MARIBEL<br/>$119.99</span>
+            </div>
+            <div class="item text-center"><img src="<?php echo $this->getViewFileUrl("images/men-2.png"); ?>" alit="slide1" /><br/>
+                    <span class="demand-font">MEDINA<br/>$79.99</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
 
 
 
@@ -119,7 +145,7 @@
         $(".less-essential-slider").owlCarousel({
             loop:true,
             margin:10,
-            nav:false,
+            nav:true,
             items: 5,
             responsive:{
                 0:{
@@ -136,11 +162,14 @@
 
 
         //men-catalog-carousel
-        $(".men-slider").owlCarousel({
+        $(".men-catalog-carousel").owlCarousel({
             loop:true,
             margin:10,
-            nav:false,
+            nav:true,
+            dots: true,
             items: 2,
+            dots:true,
+            dotsData:true,
             responsive:{
                 0:{
                     items:1
@@ -156,11 +185,13 @@
 
         //women-catalog-slider
 
-        $(".women-slider").owlCarousel({
+        $(".catalog-carousel").owlCarousel({
             loop:true,
             margin:10,
-            nav:false,
+            nav:true,
             items: 2,
+            dots:true,
+            dotsData:true,
             responsive:{
                 0:{
                     items:1

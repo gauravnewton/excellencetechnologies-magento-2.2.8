@@ -1,0 +1,67 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
+?>
+<?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())): ?>
+<?php
+    $type = 'widget-product-grid';
+
+    $mode = 'grid';
+
+    $image = 'new_products_content_widget_grid';
+    $items = $block->getProductCollection()->getItems();
+
+    $showWishlist = true;
+    $showCompare = true;
+    $showCart = true;
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
+    $description = false;
+?>
+
+
+
+<!-- less essential slider -->
+<div class="less-essential">
+<div class="less-text">
+    <img src="<?php echo $this->getViewFileUrl("images/less-essential.png"); ?>" alit="slide1" />
+</div>
+    
+    
+    <div style="width:100%;">
+        <div class="owl-carousel less-essential-slider owl-theme">
+          <?php 
+          foreach ($items as $_item) {
+              ?>
+              <div class="product-item-info">
+                    <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
+                        <?= $block->getImage($_item, $image)->toHtml() ?>
+                    </a>
+                    <div class="product-item-details text-center">
+                        <strong class="product-item-name">
+                            <a title="<?= $block->escapeHtml($_item->getName()) ?>"
+                                href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
+                                class="product-item-link">
+                                <?= $block->escapeHtml($_item->getName()) ?>
+                            </a>
+                        </strong>
+                        <?php
+                        echo $block->getProductPriceHtml($_item, $type);
+                        ?>
+
+                    </div>
+                </div>
+            <?php
+            }
+          ?>
+            
+        </div>
+    </div>
+</div>
+
+<?php endif; ?>
