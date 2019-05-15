@@ -35,11 +35,11 @@
           <?php 
           foreach ($items as $_item) {
               ?>
-              <div class="product-item-info">
+              <div>
                     <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
                         <?= $block->getImage($_item, $image)->toHtml() ?>
                     </a>
-                    <div class="product-item-details text-center">
+                    <div class="product-item-details text-center demand-font">
                         <strong class="product-item-name">
                             <a title="<?= $block->escapeHtml($_item->getName()) ?>"
                                 href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
