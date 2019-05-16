@@ -1,0 +1,42 @@
+<?php 
+$params = []; 
+$data = $block->getUserData();
+?>
+
+<form class="form create account form-create-account" action="<?php echo $this->getUrl("crud/index/createpost",$params);?>" method="POST" id="form-validate" enctype="multipart/form-data" autocomplete="off">
+    <fieldset class="fieldset create info">
+        <div class="field field-name-firstname required">
+            <label class="label">
+                <span>Name</span>
+            </label>
+            <div class="control">
+                <input type="text" name="name" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true"
+                    data-msg-required="*Please enter your name.">
+            </div>
+
+            <label class="label">
+                <span>Age</span>
+            </label>
+            <div class="control">
+                <input type="text" name="age" class="input-text required-entry" data-validate="{required:true, 'validate-digits':true}" autocomplete="off"
+                    aria-required="true" data-msg-required="*Please enter your age.">
+            </div>
+
+            <label class="label">
+                <span>Designation</span>
+            </label>
+            <div class="control">
+                <input type="text" name="designation" class="input-text required-entry" data-validate="{required:true}" autocomplete="off"
+                    aria-required="true" data-msg-required="*Please enter your designation.">
+            </div>
+        </div>
+    </fieldset>
+    <input type="submit" value="Submit">
+</form>
+<script type="text/x-magento-init">
+    {
+        ".form-create-account": {
+            "validation": {}
+        }
+    }
+</script>

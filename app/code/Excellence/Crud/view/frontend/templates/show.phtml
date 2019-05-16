@@ -1,0 +1,41 @@
+<?php 
+$collection = $block->getUserData();
+?>
+<?php if ($block->getPagerHtml()): ?>
+<div class="order-products-toolbar toolbar bottom">
+    <?php echo $block->getPagerHtml(); ?>
+</div>
+<?php endif ?>
+<div class="edit_entry">
+    <table class="edit">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Designation</th>
+            <th>Employee_Id</th>
+        </tr>
+        <?php
+            foreach ($collection as $entry) {				
+        ?>
+            <tr>
+                <td>
+                    <?php echo $entry->getName(); ?>
+                </td>
+                <td>
+                    <?php echo $entry->getAge() ; ?>
+                </td>
+                <td>
+                    <?php echo $entry->getDesignation(); ?>
+                </td>
+                <td>
+                    <?php if (!$entry->getEmployeeId() == NULL){
+                echo $entry->getEmployeeId();
+            }
+            else{
+                echo "NULL";
+            } ?>
+                </td>
+            </tr>
+            <?php } ?>
+    </table>
+</div>

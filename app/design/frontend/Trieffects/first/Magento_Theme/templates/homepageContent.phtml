@@ -1,0 +1,158 @@
+<style type="text/css">
+.slide {
+    height:400px;
+    vertical-align: middle;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.canvas {
+  &{
+    width: 100%;
+    height: 400px;
+  }
+  &-text{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column-3 {
+    float: left;
+    text-align: center;
+    width: 33.33%;
+  }
+.column-2 {
+    float: left;
+    text-align: center;
+    width: 50%;
+  }
+
+  
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.back-img {
+  position: relative;
+  text-align: center;
+  color: white;
+  height:30%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+</style>
+
+<div class="row">
+    <div class="column-3">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>leaf.png"  alt="100%-canadian-design"/><br/>
+        <img src="<?php echo $block->getUrl("pub/media/images")?>100.png"  alt="100%-canadian-design"/>
+    </div>
+    <div class="column-3">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>shield.png"  alt="shield"/><br/>
+        <img src="<?php echo $block->getUrl("pub/media/images")?>established.png"  alt="established"/>
+    </div>
+    <div class="column-3">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>snap.png"  alt="snap"/><br/>
+        <img src="<?php echo $block->getUrl("pub/media/images")?>genuine.png"  alt="genuine"/>
+    </div>
+</div>
+
+<div>
+
+
+<div class="column-2 back-img">
+        <img class="full-width" src="<?php echo $block->getUrl("pub/media/images")?>shot1.png"  alt="100%-canadian-design"/><br/>
+        <div class="centered">
+            <img src="<?php echo $block->getUrl("pub/media/images")?>up-to-30.png"  alt="up-to-30"/><br/>
+        </div>
+</div>
+
+    <div class="column-2 back-img">
+        <img class="full-width" src="<?php echo $block->getUrl("pub/media/images")?>handbags.png"  alt="hand-bags"/><br/>
+        <div class="centered">
+            <img src="<?php echo $block->getUrl("pub/media/images")?>because.png"  alt="up-to-30"/><br/>
+            <img src="<?php echo $block->getUrl("pub/media/images")?>celebrate.png"  alt="up-to-30"/><br/>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div>
+    <div class="column-2" style="text-align:left;">
+        <img src="<?php echo $block->getUrl("pub/media/images")?>black-women.png"  alt="up-to-30"/>
+    </div>
+
+    <div class="column-2">
+        <div class="owl-carousel-women-catalog owl-theme">
+            <div class="item"><h4>1</h4></div>
+            <div class="item"><h4>2</h4></div>
+            <div class="item"><h4>3</h4></div>
+            <div class="item"><h4>4</h4></div>
+            <div class="item"><h4>5</h4></div>
+            <div class="item"><h4>6</h4></div>
+            <div class="item"><h4>7</h4></div>
+            <div class="item"><h4>8</h4></div>
+            <div class="item"><h4>9</h4></div>
+            <div class="item"><h4>10</h4></div>
+            <div class="item"><h4>11</h4></div>
+            <div class="item"><h4>12</h4></div>
+        </div>
+    </div>
+</div>
+<script>
+    require([
+        'jquery',
+        'owlcarousel'
+    ], function ($) {
+        // 'use strict';
+        // jQuery.noConflict();
+        $(".owl-carousel-women-catalog").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        });
+    });
+
+
+
+</script>
