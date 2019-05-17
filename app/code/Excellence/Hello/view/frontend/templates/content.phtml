@@ -1,5 +1,30 @@
 <h1>
     <?php 
-    echo __('Model Saved With Entity ID %1',$block->getTestModel()->getData('excellence_hello_test_id')); 
+    //echo __('Model Saved With Entity ID %1',$block->getTestModel()->getData('test_id')); 
+    
+    //print_r($block->getTestModel()->getData());
+
+    
     ?>
 </h1>
+
+
+
+<div>
+    <table class="data table ">
+        <thead>
+            <th scope="col" class="col">User E-mail</th>
+            <th scope="col" class="col">Login-time</th>
+            <th scope="col" class="col">Logout-time</th>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <td data-th="User E-mail" class="col"></td>
+                <td data-th="Login-time" class="col"></td>
+                <td data-th="Logout-time" class="col"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

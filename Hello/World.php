@@ -19,7 +19,7 @@ class World extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         //creting registery variable
-        //$this->registry->register('test_var','same variable data using registry');
+        $this->registry->register('test_var','same variable data using registry');
 
         // $resultRedirect = $this->resultFactory->create(Resultfactory::TYPE_REDIRECT);
         // $resultRedirect->setUrl($this->_redirect->getRefererUrl());
@@ -27,8 +27,5 @@ class World extends \Magento\Framework\App\Action\Action
 
         return $this->resultPageFactory->create(); 
         //return $this->resultRedirectFactory->create()->setPath('excellence/index/add/', ['_current' => true]);
-        //echo "Rffdf";die;
-
-            
     } 
 }

@@ -19,29 +19,23 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             [ 'identity' => true, 'nullable' => false, 'primary' => true, 'unsigned' => true, ],
             'Entity ID'
         )->addColumn(
-            'title',
+            'email',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
             255,
             [ 'nullable' => false, ],
-            'Demo Title'
+            'email'
         )->addColumn(
-            'creation_time',
+            'login_time',
             \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
             null,
             [ 'nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT, ],
-            'Creation Time'
+            'login_time'
         )->addColumn(
-            'update_time',
+            'logout_time',
             \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
             null,
             [ 'nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE, ],
-            'Modification Time'
-        )->addColumn(
-            'is_active',
-            \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
-            null,
-            [ 'nullable' => false, 'default' => '1', ],
-            'Is Active'
+            'logout_time'
         );
         $installer->getConnection()->createTable($table);
         //END   table setup

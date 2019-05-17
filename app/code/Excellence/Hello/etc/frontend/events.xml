@@ -3,8 +3,20 @@
         <observer name="excellence_hello_test_observer" instance="Excellence\Hello\Observer\Predispatch" />
     </event>
 
+    <!-- custom event -->
     <event name="customer_customer_authenticated">
         <observer name="excellence_hello_customer_customer_authenticated" instance="Excellence\Hello\Observer\Customer\Authenticated" />
+    </event>
+
+    <!-- login event -->
+    <event name="customer_login">
+        <observer name="excellence_hello_customer_login_success_observer" instance="Excellence\Hello\Observer\CustomerLoginSuccessObserver" />
+    </event>
+
+
+    <!-- logout event -->
+    <event name="customer_logout">
+        <observer name="excellence_hello_customer_logout_observer" instance="Excellence\Hello\Observer\CustomerLogoutObserver" />
     </event>
 
 
