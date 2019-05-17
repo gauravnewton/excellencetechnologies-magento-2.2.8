@@ -6,6 +6,13 @@ use Magento\Framework\Event\ObserverInterface;
 
 class CustomerLogoutObserver implements ObserverInterface
 {
+    public function __construct(
+        \Magento\Framework\
+    )
+    {
+            
+    }
+
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
         //echo "Customer LoggedIn";
