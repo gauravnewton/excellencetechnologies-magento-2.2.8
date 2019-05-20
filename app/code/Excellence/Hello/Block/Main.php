@@ -16,7 +16,8 @@ class Main extends \Magento\Framework\View\Element\Template
     }
     protected function _prepareLayout()
     {
-        $test = $this->_testFactory->create();
+        //creating a factory to load db..
+        //$test = $this->_testFactory->create();
         // $test->setTitle('Test Title');
         // $test->save();
         // $this->setTestModel($test);
@@ -29,12 +30,19 @@ class Main extends \Magento\Framework\View\Element\Template
         //  $test->delete(1);
 
 
-        $test->load(10);
-        $test->setTitle('Updated Title');
-        $test->save();
-        $this->setTestModel($test);
+        // $test->load(10);
+        // $test->setTitle('Updated Title');
+        // $test->save();
+        // $this->setTestModel($test);
 
-        //accessing registry variable 
-        print_r($this->registry->registry('test_var'));
+        // //accessing registry variable 
+        // print_r($this->registry->registry('test_var'));
+    } 
+    public function grabbingData(){
+        $test = $this->_testFactory->create()->getCollection();
+        // echo "<pre>";
+       return $test->getData();
+        // die();
+
     }
 }

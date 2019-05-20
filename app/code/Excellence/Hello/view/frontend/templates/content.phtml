@@ -1,30 +1,44 @@
-<h1>
-    <?php 
+
+    <?php
+    $array_key = $block->grabbingData(); 
     //echo __('Model Saved With Entity ID %1',$block->getTestModel()->getData('test_id')); 
-    
+    //print_r( $array_key);
     //print_r($block->getTestModel()->getData());
 
     
     ?>
-</h1>
 
 
 
 <div>
-    <table class="data table ">
+    <table class="data table text-center" >
         <thead>
-            <th scope="col" class="col">User E-mail</th>
-            <th scope="col" class="col">Login-time</th>
-            <th scope="col" class="col">Logout-time</th>
+            <th scope="col" class="col text-center">User E-mail</th>
+            <th scope="col" class="col text-center">Login-time</th>
+            <th scope="col" class="col text-center">Logout-time</th>
         </thead>
-
-
+            <?php 
+                foreach($array_key as $row)
+                {
+                    ?>
+                    <tr>
+                        <td scope="col" class="col">
+                            <?php echo $row['email']; ?>
+                        </td>
+                        <td scope="col" class="col">
+                            <?php echo $row['login_time']; ?>
+                        </td>
+                        <td scope="col" class="col">
+                            <?php echo $row['logout_time']; ?>
+                        </td>
+                    </tr>
+                    <?php
+                }
+            ?>
         <tbody>
-            <tr>
-                <td data-th="User E-mail" class="col"></td>
-                <td data-th="Login-time" class="col"></td>
-                <td data-th="Logout-time" class="col"></td>
-            </tr>
+            
+                
+            
         </tbody>
     </table>
 </div>

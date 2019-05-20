@@ -28,13 +28,13 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             'login_time',
             \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
             null,
-            [ 'nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT, ],
+            [ 'nullable' => false, ],
             'login_time'
         )->addColumn(
             'logout_time',
             \Magento\Framework\DB\Ddl\Table::TYPE_TIMESTAMP,
             null,
-            [ 'nullable' => false, 'default' => \Magento\Framework\DB\Ddl\Table::TIMESTAMP_INIT_UPDATE, ],
+            [ 'nullable' => false, ],
             'logout_time'
         );
         $installer->getConnection()->createTable($table);
