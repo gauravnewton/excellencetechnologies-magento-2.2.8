@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mageplaza_Helloworld::helloworld" title="Hello World" module="Mageplaza_Helloworld" sortOrder="15" dependsOnModule="Mageplaza_Helloworld" resource="Mageplaza_Helloworld::helloworld"/>
+       
+       
+        <add id="Mageplaza_Helloworld::helloworld1" title="Workd" module="Mageplaza_Helloworld" sortOrder="10" parent="Mageplaza_Helloworld::helloworld" resource="Mageplaza_Helloworld::helloworld" />
+        <add id="Mageplaza_Helloworld::helloworld2" title="Menu 1" module="Mageplaza_Helloworld" sortOrder="10" parent="Mageplaza_Helloworld::helloworld" action="mageplaza_helloworld/post"  resource="Mageplaza_Helloworld::helloworld"/>
+
+       
+    </menu>
+</config>

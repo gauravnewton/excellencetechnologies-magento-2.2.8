@@ -2,6 +2,10 @@ sudo php bin/magento setup:upgrade
 
 sudo php bin/magento setup:static-content:deploy -f
 
+sudo php bin/magento indexer:reindex
+
+sudo php bin/magento setup:di:compile
+
 sudo chmod -R 777 var/ pub/ generated/
 
 sudo php bin/magento c:c

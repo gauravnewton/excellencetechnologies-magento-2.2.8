@@ -5,8 +5,10 @@ return [
         'Magento_Directory' => 1,
         'Magento_Eav' => 1,
         'Magento_Theme' => 1,
+        'Excellence_AdminMenu' => 1,
         'Excellence_Hello' => 1,
         'Excellence_SliderModule' => 1,
+        'Excellence_UiForm' => 1,
         'Magento_Cms' => 1,
         'Magento_Customer' => 1,
         'Magento_AdminNotification' => 1,
@@ -145,7 +147,9 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
+        'Mageplaza_Helloworld' => 1,
         'Temando_Shipping' => 1,
+        'Turiknox_SampleImageUploader' => 1,
         'Vertex_Tax' => 1
     ]
 ];

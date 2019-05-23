@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Excellence_UiForm::image"
+             title="UI FORM"
+             module="Excellence_UiForm"
+             sortOrder="75" resource="Excellence_UiForm::image"
+             action="uiform/image/index"/>
+    </menu>
+</config>
