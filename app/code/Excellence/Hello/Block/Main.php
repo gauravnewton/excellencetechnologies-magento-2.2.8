@@ -1,5 +1,5 @@
 <?php
-namespace Excellence\Hello\Block;
+namespace Excellence\Hello\Block\Adminhtml\Form;
   
 class Main extends \Magento\Framework\View\Element\Template
 {   
@@ -40,9 +40,11 @@ class Main extends \Magento\Framework\View\Element\Template
     } 
     public function grabbingData(){
         $test = $this->_testFactory->create()->getCollection();
-        // echo "<pre>";
+         echo "<pre>";
+         print_r($test->getData());
+         die("dkbu");
        return $test->getData();
-        // die();
+        
 
     }
 }

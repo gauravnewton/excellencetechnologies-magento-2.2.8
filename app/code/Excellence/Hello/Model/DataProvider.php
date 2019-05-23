@@ -1,8 +1,8 @@
 <?php
 namespace Excellence\Hello\Model;
 
-use Pfay\Contacts\Model\ResourceModel\Contact\CollectionFactory;
-use Pfay\Contacts\Model\Contact;
+use Excellence\Hello\Model\ResourceModel\Test\CollectionFactory;
+use Excellence\Hello\Model\Test;
 
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {

@@ -16,6 +16,9 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
+        // $d = $this->getRequest()->getPostValue();
+        // echo "<pre>";
+        // print_r($d);die("dcfvgbhj");
         $resultPage->setActiveMenu('Excellence_Hello::hello_world_test1');
         $resultPage->addBreadcrumb(__('Hello'), __('Hello'));
         $resultPage->addBreadcrumb(__('World'), __('World'));
