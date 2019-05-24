@@ -33,7 +33,7 @@ class Image extends AbstractModel implements ImageInterface
     public function __construct(
         Context $context,
         Registry $registry,
-        UploaderPool $uploaderPool,
+        // UploaderPool $uploaderPool,
         AbstractResource $resource = null,
         AbstractDb $resourceCollection = null,
         array $data = []

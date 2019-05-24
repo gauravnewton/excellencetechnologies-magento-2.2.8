@@ -54,6 +54,8 @@
                 <item name="label" xsi:type="string" translate="true">Image Details</item>
             </item>
         </argument>
+        
+
         <field name="image_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

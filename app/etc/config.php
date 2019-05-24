@@ -6,6 +6,7 @@ return [
         'Magento_Eav' => 1,
         'Magento_Theme' => 1,
         'Excellence_AdminMenu' => 1,
+        'Excellence_ExcellenceSlider' => 1,
         'Excellence_Hello' => 1,
         'Excellence_SliderModule' => 1,
         'Excellence_UiForm' => 1,

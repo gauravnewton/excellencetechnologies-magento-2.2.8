@@ -1,6 +1,6 @@
 <?php
  
-namespace Excellence\Hello\Controller\Adminhtml\World;
+namespace Excellence\ExcellenceSlider\Controller\Adminhtml\Slider;
  
 class Index extends \Magento\Backend\App\Action
 {
@@ -19,10 +19,10 @@ class Index extends \Magento\Backend\App\Action
         // $d = $this->getRequest()->getPostValue();
         // echo "<pre>";
         // print_r($d);die("dcfvgbhj");
-        $resultPage->setActiveMenu('Excellence_Hello::hello_world_test1');
-        $resultPage->addBreadcrumb(__('Hello'), __('Hello'));
-        $resultPage->addBreadcrumb(__('World'), __('World'));
-        $resultPage->getConfig()->getTitle()->prepend(__('Customer Login Tracker'));
+        $resultPage->setActiveMenu('Excellence_ExcellenceSlider::excellence_slider_menu1');
+        $resultPage->addBreadcrumb(__('Excellence'), __('Excellence'));
+        $resultPage->addBreadcrumb(__('Slider'), __('Slider'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Excellence Slider'));
         return $resultPage;
     }
 }
