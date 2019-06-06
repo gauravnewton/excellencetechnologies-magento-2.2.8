@@ -1,0 +1,54 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?><div class="row max-width">
+
+    <!-- left column -->
+    <div class="footer-left-col">
+        <img src="<?php echo $this->getViewFileUrl('images/panda.png'); ?>" />
+    </div>
+
+    <div class="block newsletter footer-center-col">
+        <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+        <div class="content">
+            <div class="footer-text">
+                Restez informé sur nos collections, profitez de promotions, de<br/> conseils et de concours exclusifs aux<br/> membres. Abonnez-vous dès maintenant.
+            </div>
+            <form class="form subscribe"
+                novalidate
+                action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+                method="post"
+                data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                id="newsletter-validate-detail">
+                <div class="field newsletter">
+                    <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label>
+                    <div class="control">
+                        <input name="email" type="email" id="newsletter"
+                               placeholder="<?= $block->escapeHtml(__('Saisissez votre email')) ?>"
+                               data-mage-init='{"mage/trim-input":{}}'
+                               data-validate="{required:true, 'validate-email':true}"/>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+                        <span class="fa fa-arrow-right newsletter-button"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- right column -->
+    <div class="footer-right-col">
+        <img class="child"  src="<?php echo $this->getViewFileUrl('images/footer.png'); ?>" />
+    </div>
+
+</div>

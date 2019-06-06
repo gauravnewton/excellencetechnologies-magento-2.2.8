@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <head>
+        <css src="Excellence_PushNotification::css/edit/styles.css" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Excellence\PushNotification\Block\Adminhtml\Templates\Edit" name="pushnotification_templates_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Excellence\PushNotification\Block\Adminhtml\Templates\Edit\Tabs" name="pushnotification_templates_edit_tabs">
+                <block class="Excellence\PushNotification\Block\Adminhtml\Templates\Edit\Tab\NewTemplate" name="pushnotification_templates_edit_tab_newtemplate"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">newtemplate_section</argument>
+                    <argument name="block" xsi:type="string">pushnotification_templates_edit_tab_newtemplate</argument>
+                </action>
+                <!--CedAddTab-->
+            </block>
+        </referenceContainer>
+    </body>
+</page>

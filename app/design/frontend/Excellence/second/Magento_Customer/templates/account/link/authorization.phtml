@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Account\AuthorizationLink $block */
+
+$dataPostParam = '';
+if ($block->isLoggedIn()) {
+    $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+}
+?>
+<li class="level0  category-item  level-top ui-menu-item " id="search-btn">
+        <a href="#" class="level-top ui-corner-all search-btn-link" ><span class="fa fa-search search search-icon"></span>
+</li>
+<li class="authorization-link" data-label="<?= $block->escapeHtml(__('or')) ?>">
+    <a  <?= /* @noEscape */ $block->getLinkAttributes() ?><?= /* @noEscape */ $dataPostParam ?>><!-- 
+        <?= $block->escapeHtml($block->getLabel()) ?> -->
+
+        <span class="login-link"></span>
+    </a>
+</li>
+
+
+
+
+<script type="text/javascript">
+require(['jquery'], function($) {
+    //console.log('test1');
+    $('#search-btn').click(function(){
+        console.log('test2');
+        // $(".main2-header-container").toggle();
+        $(".block-search").toggleClass("show-hide");
+        //$(".fa").toggleClass("search-underline");
+        });
+});
+</script>

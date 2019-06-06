@@ -1,9 +1,20 @@
 <?php
 namespace Excellence\ExcellenceSlider\Model\ResourceModel;
+
+/**
+ * Slider resource
+ */
 class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
-    protected function _construct()
+    /**
+     * Initialize resource
+     *
+     * @return void
+     */
+    public function _construct()
     {
-        $this->_init('excellence_excellenceslider_slider','slider_id');
+        $this->_init('excellenceslider_slider', 'id');
     }
+
+  
 }

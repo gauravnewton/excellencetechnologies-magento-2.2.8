@@ -1,0 +1,109 @@
+<div style="width:100%;" class="max-width">
+	<div class="col-left">
+		<div class="left-image-col">
+			<img src="<?php echo $this->getViewFileUrl('images/ecco.png'); ?>" class="ecco"/><br/>
+			<img src="<?php echo $this->getViewFileUrl('images/shoes.png'); ?>" class="shoes" /><br/>
+			<button class="col-left-btn" >Jetez un coup d'oeil</button>
+		</div>
+
+		<div class="left-division">
+			<img class="col-left-img-one" src="<?php echo $this->getViewFileUrl('images/col-left-div-2.png'); ?>" /><br/>
+			<img class="col-left-img-two" src="<?php echo $this->getViewFileUrl('images/left-div-girl.png'); ?>" />
+		</div>
+
+	</div>
+
+
+
+
+	<div class="main-col"> 
+		<div  class="demanded-font main-col-txt"> En vedettes</div>
+	    <div class="main-col-image"></div>
+	</div>
+
+
+
+	
+	<div class="col-right">
+		<div class="right-image-col">
+			<img src="<?php echo $this->getViewFileUrl('images/ecco.png'); ?>" class="ecco"/><br/>
+			<img src="<?php echo $this->getViewFileUrl('images/shoe.png'); ?>" class="shoes" /><br/>
+			<button class="col-left-btn">Jetez un coup d'oeil</button>	
+		</div>
+
+		<div>
+			<div class="right-division">
+			<img class="col-right-img-one" src="<?php echo $this->getViewFileUrl('images/col-right-div-2.png'); ?>" /><br/>
+			<img class="col-right-img-two" src="<?php echo $this->getViewFileUrl('images/right-div-boy.png'); ?>" />
+		</div>	
+		</div>
+		
+	</div>
+
+</div>
+
+
+
+
+
+<div class="nos-font product-text max-width">
+	<span>Nos Produits</span>	
+</div>
+
+
+<div class="btns max-width" id="btns">
+	<span><a href="#btn-one-two" class="btn-link btn-active" id="btn1">Plus vendus</a></span>
+	<span><a href="#btn-one-div" class="btn-link" id="btn2">Nouveautes</a></span>
+	<span><a href="#btn-one-div" class="btn-link" id="btn3">Coup de coeur</a></span>
+</div>
+
+
+
+ <script type="text/javascript">
+    require(['jquery'], function($) {
+        //console.log('test1');
+        $("#btn-two-div").css("display","none");
+        $("#btn-three-div").css("display","none");
+
+        $("#btn-one-div").addClass("max-width");
+        $("#btn-two-div").addClass("max-width");
+        $("#btn-three-div").addClass("max-width");
+
+        $('#btn1').click(function(){
+            console.log('btn1');
+            $("#btn1").addClass("btn-active");
+            $("#btn2").removeClass("btn-active");
+            $("#btn3").removeClass("btn-active");
+
+
+            $("#btn-one-div").css("display","block");
+            $("#btn-two-div").css("display","none");
+            $("#btn-three-div").css("display","none");
+            
+            });
+        $('#btn2').click(function(){
+            console.log('btn2');
+            $("#btn2").addClass("btn-active");
+            $("#btn1").removeClass("btn-active");
+            $("#btn3").removeClass("btn-active");
+
+            $("#btn-one-div").css("display","none");
+            $("#btn-two-div").css("display","block");
+            $("#btn-three-div").css("display","none");
+            
+            });
+        $('#btn3').click(function(){
+            console.log('btn1');
+            $("#btn3").addClass("btn-active");
+            $("#btn1").removeClass("btn-active");
+            $("#btn2").removeClass("btn-active");
+
+
+
+            $("#btn-one-div").css("display","none");
+            $("#btn-two-div").css("display","none");
+            $("#btn-three-div").css("display","block");
+            
+            });
+    });
+ </script>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Excellence. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Excellence_PushNotification::pushnotification" title="Excellence Push Notification" module="Excellence_PushNotification" sortOrder="30" parent="Excellence_Base::base" resource="Excellence_Base::base"/>
+        <add id="Excellence_PushNotification::excellence_templates_index" title="Templates" module="Excellence_PushNotification" sortOrder="20" parent="Excellence_PushNotification::pushnotification" dependsOnModule="Excellence_PushNotification" action="pushnotification/templates/index" resource="Excellence_PushNotification::excellence_templates_index"/>
+    </menu>
+</config>

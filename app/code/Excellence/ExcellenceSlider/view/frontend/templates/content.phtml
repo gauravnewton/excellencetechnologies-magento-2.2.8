@@ -1,0 +1,44 @@
+<?php 
+$helper = $this->helper('Excellence\ExcellenceSlider\Helper\Data');
+$sliderStatus=$helper->isSliderEnabled();
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance 
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+$sliderCollection = $helper->getSliderUrl();
+
+if ($sliderStatus == '1'){ 
+  ?>
+<div class="owl-carousel owl-theme home-page-slider">
+  <?php
+
+     foreach($sliderCollection->getData() as $slide){
+        ?>
+        <div>
+            <img src="<?php echo $mediaUrl.$slide['path']; ?>" />
+        </div>
+        <?php
+     }
+  ?>
+</div>
+<?php
+}
+?>
+<script>
+   require([
+       'jquery',
+       'owlcarousel'
+   ], function () {
+       'use strict';
+       jQuery.noConflict();
+       jQuery(".home-page-slider").owlCarousel({
+           nav: true, // Show next and prev buttons
+           navText:false, //show prev next
+           loop: true,
+           autoplay: true, //Set AutoPlay
+           autoplayHoverPause: true, //stop when mouse on carousel
+           items : 1
+       });
+   });
+</script>
