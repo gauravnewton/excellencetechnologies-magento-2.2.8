@@ -10,8 +10,7 @@
 
         <move element="top-message" destination="header.panel" before="-" />
         <move element="top-offers" destination="header.panel" after="top-message" />
-        
-
+      
         <move element="logo" destination="catalog.topnav" />
         <move element="authorization-link-login" destination="catalog.topnav" />
         <move element="minicart" destination="catalog.topnav"/>
@@ -31,7 +30,7 @@
         <move element="form.subscribe"  before="-" destination="subscribe-container" />
 
         <referenceBlock name="footer_links" remove="true"/>
-
+ 
         <block class="Magento\Framework\View\Element\Template" name="footer-custum-link" template="Magento_Theme::custom-footer.phtml"/>
 
         <move element="footer-custum-link" destination="footer-container"/>

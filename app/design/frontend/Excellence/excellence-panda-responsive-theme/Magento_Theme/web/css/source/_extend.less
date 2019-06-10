@@ -1,6 +1,8 @@
-// Common
+/*// Common
 // (for styles used in both mobile and desktop views)
-& when (@media-common = true) {}
+& when (@media-common = true) {
+	
+}
  
 // Mobile
 // (for all mobile styles.)
@@ -10,10 +12,20 @@
  
 // Tablet
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-	
+	.toggle-visible{
+		display:none !important;
+	}
 }
  
 // Desktop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
 		
+}*/
+
+
+
+@media (max-width: 768px){
+	.toggle-visible{
+		display:none !important;
+	}
 }
