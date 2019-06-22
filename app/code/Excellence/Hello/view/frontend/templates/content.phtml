@@ -1,5 +1,5 @@
 
-    <?php
+   <!--  <?php
     $array_key = $block->grabbingData(); 
     //echo __('Model Saved With Entity ID %1',$block->getTestModel()->getData('test_id')); 
     //print_r( $array_key);
@@ -41,4 +41,22 @@
             
         </tbody>
     </table>
+</div> -->
+<div data-bind="scope: 'koexample'">
+<!-- ko template: getTemplate() --><!-- /ko -->
 </div>
+  
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "koexample": {
+                            "component": "Excellence_Hello/js/knock",
+                            "template" : "Excellence_Hello/example"
+                        }
+                    }
+                }
+            }
+        }
+</script>ss

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Excellence. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add 	id="Excellence_ShippingRules::excellence_shippingrules_index" 
+	        	title="Excellence Shipping Rules" module="Excellence_ShippingRules"  
+	        	sortOrder="100" parent="Magento_Sales::sales" 
+	        	action="shippingrules/shippingrules/index" 
+	        	resource="Excellence_ShippingRules::excellence_shippingrules_index"/>
+    </menu>
+</config>

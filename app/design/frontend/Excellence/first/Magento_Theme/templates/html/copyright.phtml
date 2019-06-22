@@ -23,3 +23,28 @@
     </div>
 </div>
     
+
+<!-- calling KO of Excellence_Helo module example.html file here -->
+<div data-bind="scope: 'koexample'">
+<!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+  
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "koexample": {
+                            "component": "Excellence_Hello/js/knock",
+                            "template" : "Excellence_Hello/example"
+                        }
+                    }
+                }
+            }
+        }
+</script>
+
+
+<!-- end here -->
+
+
