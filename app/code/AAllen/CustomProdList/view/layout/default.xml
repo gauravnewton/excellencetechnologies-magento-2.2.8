@@ -1,0 +1,7 @@
+<referenceContainer name="content">
+     <referenceBlock name="product_list_toolbar">
+          <action method="setDefaultListPerPage">
+                 <argument name="limit" xsi:type="string">4</argument>
+          </action>
+    </referenceBlock>
+</referenceContainer>

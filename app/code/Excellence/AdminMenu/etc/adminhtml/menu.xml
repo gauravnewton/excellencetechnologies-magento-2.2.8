@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-
         <add id="Excellence_AdminMenu::admin_menu" title="Admin Menu" module="Excellence_AdminMenu" sortOrder="15" dependsOnModule="Excellence_AdminMenu" resource="Excellence_AdminMenu::admin_menu"/>
-        
-        
         <add id="Excellence_AdminMenu::admin_sub_menu_title" title="Admin Menu" module="Excellence_AdminMenu" sortOrder="10" parent="Excellence_AdminMenu::admin_menu" resource="Excellence_AdminMenu::admin_menu" />
-        <add id="Excellence_AdminMenu::admin_menu1" title="Menu 1" module="Excellence_AdminMenu" sortOrder="10" parent="Excellence_AdminMenu::admin_sub_menu_title" resource="Excellence_AdminMenu::admin_menu1"/>
+        <add id="Excellence_AdminMenu::admin_menu1" title="Menu 1" action="adminmenu/firecontrol" module="Excellence_AdminMenu" sortOrder="10" parent="Excellence_AdminMenu::admin_sub_menu_title" resource="Excellence_AdminMenu::admin_menu1"/>
         <add id="Excellence_AdminMenu::admin_menu2" title="Menu 2" module="Excellence_AdminMenu" sortOrder="10" parent="Excellence_AdminMenu::admin_sub_menu_title" resource="Excellence_AdminMenu::admin_menu2"/>
-
-        
-    </menu>
+ </menu>
 </config>

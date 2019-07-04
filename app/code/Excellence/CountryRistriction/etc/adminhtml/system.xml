@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- <tab id="excellence" translate="label" sortOrder="100"> 
+            add a new tab with id excellence
+            <label>Excellence</label>
+        </tab> 
+        uncomment this if u have not Excellence_ExcellenceSlider module
+        -->
+        <section id="excellence_shipping_country" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <!-- add a new section with id excellence and for tab excellence -->
+            <class>separator-top</class>
+            <label>Country Ristriction</label>
+            <tab>excellence</tab>
+            <resource>Excellence_CountryRistriction::countryristriction</resource>
+            <group id="country_restriction_status" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <!-- add a new group with id active display -->
+                <label>Shipping Country Ristriction</label>
+                <field id="scope" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <!-- add a new field with id scope -->
+                    <label>Enable Country Ristriction</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="restriction_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Restricted Countries</label>
+                <field id="restrictedcountry" translate="label" type="multiselect" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Restricted Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
